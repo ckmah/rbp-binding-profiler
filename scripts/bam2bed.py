@@ -25,6 +25,9 @@ def vprint(msg):
 
 
 def preprocess_bam_to_bed(bam, output):
+    '''
+    Given local bam file, convert reads to set of 101bp intervals and output as bed file. Filter for reads thats are 
+    '''
 		# convert bam to bed
 		vprint("Converting bam to bed...")
 		bam = BedTool(bam)
@@ -32,7 +35,6 @@ def preprocess_bam_to_bed(bam, output):
 
 		# filter intervals
 		vprint("Filter reads by size...")
-
 		bed_chunk_iter = bed.to_dataframe(chunksize=10000000)  # chunk large file
 		chunks = []
 		for chunk in bed_chunk_iter:
@@ -77,6 +79,7 @@ def preprocess_bam_to_bed(bam, output):
 
 
 def is_valid_interval(start, end):
+    '''Check if read interval is between 90 and 150 bp.'''
 		dist = end - start
 		return (dist > 90) & (dist < 150)
 

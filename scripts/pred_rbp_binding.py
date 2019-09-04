@@ -30,13 +30,13 @@ def predict(bed_file, model, tosample, fasta_file, gtf_file, output_dir):
         vprint(f'Performing bootstrap sampling (n={sample_size}, iterations={iterations})...')
 
         # sample
+        bed_df = bed.to_dataframe()
         sample_df = bed_df.sample(sample_size*iterations, replace=True)
 
     # write to file
     intervals_file = f'{file_prefix}.bed'
     
     if tosample:
-        bed_df = bed.to_dataframe()
         BedTool.from_dataframe(sample_df).moveto(intervals_file)
     else:
         intervals_file = bed

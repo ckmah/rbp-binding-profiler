@@ -1,7 +1,7 @@
 # rbp-binding-profiler
 
 ## Setup
-Requires `Python 3.6 and Anaconda`.
+Requires `Python 3.6` and Anaconda.
 
 1. Install dependencies with file with `pip install -r requirements.txt`
 2. Create and activate virtual environment with `kipoi ` env utility.
@@ -10,6 +10,11 @@ Requires `Python 3.6 and Anaconda`.
 ```
 kipoi env create --gpu rbp_eclip source=kipoi
 conda activate kipoi-gpu-rbp_eclip
+```
+
+### Test
+```
+kipoi test rbp_eclip/AARS --source=kipoi
 ```
 
 ## Scripts

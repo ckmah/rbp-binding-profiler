@@ -30,7 +30,7 @@ h5py==2.9.0
 heapdict==1.0.0
 hyperopt==0.1.2
 idna==2.8
-Jinja2==2.10.1
+Jinja2==2.11.3
 jinja2-time==0.2.0
 joblib==0.13.2
 Keras==2.2.5

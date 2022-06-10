@@ -11,7 +11,7 @@ Click==7.0
 cloudpickle==1.2.1
 colorlog==4.0.2
 concise==0.6.7
-cookiecutter==1.6.0
+cookiecutter==2.1.1
 cycler==0.10.0
 Cython==0.29.13
 cytoolz==0.10.0

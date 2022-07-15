@@ -19,7 +19,7 @@ dask==1.2.0
 decorator==4.4.0
 deprecation==2.0.7
 descartes==1.1.0
-distributed==1.28.1
+distributed==2021.10.0
 enum34==1.1.6
 future==0.17.1
 gast==0.2.2
